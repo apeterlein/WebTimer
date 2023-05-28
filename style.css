@@ -3,12 +3,23 @@ body {
 	color: #570861;
 	touch-action: manipulation;
 }
-.container {
+footer {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 20px;
+}
+.full {
 	height: 100vh;
 	font-size: 120px;
 }
+.preset {
+	font-size: 40px;
+}
 .btn {
 	background-color: #570861;
+	color: #bfe9ff;
+}
+.rounded-circle {
 	width: 75px;
 	height: 75px;
 }
@@ -21,6 +32,7 @@ body {
 }
 .btn:hover {
 	background-color: #570861;
+	color: #bfe9ff;
 }
 @keyframes end {
 	from { background: #ff6e7f; }

@@ -1,9 +1,25 @@
 $(document).ready(function () {
 	let start = new Date();
-	let inc = 60*60*1000;
+	let inc = 1*60*60*1000;
 	$("#plus").click(function () { inc += 60*1000; });
 	$("#minus").click(function () { inc -= 60*1000; });
 	$("#timer").width($("#timer").width() + 10);
+	$("#preset_1").click(function () {
+		start = new Date();
+		inc = 2*60*60*1000;
+	});
+	$("#preset_2").click(function () {
+		start = new Date();
+		inc = 1*60*60*1000;
+	});
+	$("#preset_3").click(function () {
+		start = new Date();
+		inc = 53*60*1000;
+	});
+	$("#preset_4").click(function () {
+		start = new Date();
+		inc = 30*60*1000;
+	});
 	setInterval(function () {
 		let elap = new Date() - start;
 		if (elap > inc) {
