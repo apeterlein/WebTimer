@@ -4,12 +4,12 @@ body {
 }
 .container {
 	height: 100vh;
+	font-size: 120px;
 }
 .btn {
 	background-color: #570861;
-	width: 50px;
-	height: 50px;
-	font-size: 2rem;
+	width: 75px;
+	height: 75px;
 }
 .done {
 	-webkit-animation: end 2s infinite alternate;
