@@ -14,14 +14,17 @@ footer {
 }
 .preset {
 	font-size: 40px;
+	outline: #570861 solid medium !important;
 }
 .btn {
 	background-color: #570861;
 	color: #bfe9ff;
 }
 .rounded-circle {
-	width: 75px;
-	height: 75px;
+	width: 80px;
+	height: 80px;
+	margin-bottom: 18px;
+	outline: #570861 solid thick !important;
 }
 .done {
 	-webkit-animation: end 2s infinite alternate;
@@ -33,6 +36,9 @@ footer {
 .btn:hover {
 	background-color: #570861;
 	color: #bfe9ff;
+}
+.btn:active {
+	color: #570861 !important;
 }
 @keyframes end {
 	from { background: #ff6e7f; }

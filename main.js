@@ -23,16 +23,16 @@ $(document).ready(function () {
 	setInterval(function () {
 		let elap = new Date() - start;
 		if (elap > inc) {
-			$("body").addClass("done");
 			inc = elap;
+			$("body").addClass("done");
 		}
 		else {
 			$("body").css('background-color', getColor(elap, inc));
-			$(".preset").css('color', getColor(elap, inc));
 			$("body").removeClass("done");
 		}
+		$(".preset").css('color', getColor(elap, inc));
 		$("#timer").html(msToTime(inc - elap));
-	}, 10);
+	}, 20);
 });
 function msToTime(duration) {
 	let seconds = Math.floor((duration / 1000) % 60);
