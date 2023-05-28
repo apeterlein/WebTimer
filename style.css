@@ -1,6 +1,7 @@
 body {
 	background-color: #bfe9ff;
 	color: #570861;
+	touch-action: manipulation;
 }
 .container {
 	height: 100vh;
