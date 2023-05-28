@@ -28,6 +28,7 @@ $(document).ready(function () {
 		}
 		else {
 			$("body").css('background-color', getColor(elap, inc));
+			$(".preset").css('color', getColor(elap, inc));
 			$("body").removeClass("done");
 		}
 		$("#timer").html(msToTime(inc - elap));
