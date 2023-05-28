@@ -1,0 +1,27 @@
+body {
+	background-color: #bfe9ff;
+	color: #570861;
+}
+.container {
+	height: 100vh;
+}
+.btn {
+	background-color: #570861;
+	width: 50px;
+	height: 50px;
+	font-size: 2rem;
+}
+.done {
+	-webkit-animation: end 2s infinite alternate;
+	-moz-animation: end 2s infinite alternate;
+	-ms-animation: end 2s infinite alternate;
+	-o-animation: end 2s infinite alternate;
+	animation: end 2s infinite alternate;
+}
+.btn:hover {
+	background-color: #570861;
+}
+@keyframes end {
+	from { background: #ff6e7f; }
+	to { background: #ff5349; }
+}
