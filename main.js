@@ -25,12 +25,14 @@ $(document).ready(function () {
 		if (elap > inc) {
 			inc = elap;
 			$("body").addClass("done");
+			$(".preset").addClass("btn-done");
 		}
 		else {
 			$("body").css('background-color', getColor(elap, inc));
 			$("body").removeClass("done");
+			$(".preset").css('color', getColor(elap, inc));
+			$(".preset").removeClass("btn-done");
 		}
-		$(".preset").css('color', getColor(elap, inc));
 		$("#timer").html(msToTime(inc - elap));
 	}, 20);
 });
@@ -43,10 +45,14 @@ function msToTime(duration) {
 	return hours + ":" + minutes + ":" + seconds
 }
 function getColor(elap, inc) {
-	let start_r = 191, start_g = 233, start_b = 255;
-	let end_r = 255, end_g = 110, end_b = 127;
-	let x = elap / inc;
-	return rgbToHex(map(x, start_r, end_r), map(x, start_g, end_g), map(x, start_b, end_b));
+	let start_r = 202, start_g = 239, start_b = 215; // #caefd7
+	let mid_r = 171, mid_g = 201, mid_b = 233; // #abc9e9
+	let end_r = 254, end_g = 191, end_b = 215; // #f5bfd7
+	let x = (elap / inc) * 2;
+	if (x < 1) {
+		return rgbToHex(map(x, start_r, mid_r), map(x, start_g, mid_g), map(x, start_b, mid_b));
+	}
+	return rgbToHex(map(x-1, mid_r, end_r), map(x-1, mid_g, end_g), map(x-1, mid_b, end_b));
 }
 function compToHex(c) {
 	var hex = c.toString(16);

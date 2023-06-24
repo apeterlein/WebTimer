@@ -1,5 +1,5 @@
 body {
-	background-color: #bfe9ff;
+	background-color: #caefd7;
 	color: #570861;
 	touch-action: manipulation;
 }
@@ -18,7 +18,7 @@ footer {
 }
 .btn {
 	background-color: #570861;
-	color: #bfe9ff;
+	color: #caefd7;
 }
 .rounded-circle {
 	width: 80px;
@@ -33,14 +33,25 @@ footer {
 	-o-animation: end 2s infinite alternate;
 	animation: end 2s infinite alternate;
 }
+.btn-done {
+	-webkit-animation: btn-end 2s infinite alternate;
+	-moz-animation: btn-end 2s infinite alternate;
+	-ms-animation: btn-end 2s infinite alternate;
+	-o-animation: btn-end 2s infinite alternate;
+	animation: btn-end 2s infinite alternate;
+}
 .btn:hover {
 	background-color: #570861;
-	color: #bfe9ff;
+	color: #caefd7;
 }
 .btn:active {
 	color: #570861 !important;
 }
 @keyframes end {
-	from { background: #ff6e7f; }
+	from { background: #f5bfd7; }
 	to { background: #ff5349; }
+}
+@keyframes btn-end {
+	from { color: #f5bfd7; }
+	to { color: #ff5349; }
 }
